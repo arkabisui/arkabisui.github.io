@@ -96,13 +96,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: var(--hero-opacity, 0.30);
+  opacity: var(--hero-opacity, 0.45);
   pointer-events: none;
 }
 
 [data-md-color-scheme="slate"] .hero::before {
   background-image: url("../images/hero-dark.jpg");
-  opacity: var(--hero-opacity-dark, 0.38);
+  opacity: var(--hero-opacity-dark, 0.45);
 }
 
 /* Soft wash so the headline stays readable over the busy centre */
