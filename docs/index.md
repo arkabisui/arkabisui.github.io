@@ -21,15 +21,19 @@ hide:
 
 ## About Me
 
-<div class="grid" markdown>
+<div class="about" markdown>
 
+<div markdown>
 ![About Arka Bisui](assets/images/about.png){ .about-pic }
+</div>
 
+<div markdown>
 I am a postgraduate student in the Department of Civil Engineering at **IIT Bombay**, specialising in **Transportation Systems Engineering** (CPI 9.63). My work sits at the intersection of traffic flow theory, discrete choice modelling and micro-simulation — currently on adaptive signal control for vehicle-actuated corridors.
 
 Before IIT Bombay I completed my B.Tech in Civil Engineering at **IIEST Shibpur**, where I worked across structural design, geotechnical modelling and public health engineering. That breadth is deliberate: transportation problems rarely stay inside one discipline.
 
 I am driven by research and innovation, and by applying analytical and experimental methods to complex engineering problems in order to develop data-driven, impactful solutions.
+</div>
 
 </div>
 
