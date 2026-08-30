@@ -76,26 +76,82 @@
 /* Hero --------------------------------------------------------------------- */
 
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   text-align: center;
   padding: 2.5rem 1rem 2rem;
   border-bottom: 1px solid var(--ac-hairline);
   margin-bottom: 2.5rem;
 }
 
+/* Watercolour backdrop. Change --hero-opacity to taste:
+   0.30 = 70% transparent (current) · higher = stronger image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../images/hero-light.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: var(--hero-opacity, 0.30);
+  pointer-events: none;
+}
+
+[data-md-color-scheme="slate"] .hero::before {
+  background-image: url("../images/hero-dark.jpg");
+  opacity: var(--hero-opacity-dark, 0.38);
+}
+
+/* Soft wash so the headline stays readable over the busy centre */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse 70% 65% at 50% 48%,
+    rgba(252, 252, 253, 0.95) 0%,
+    rgba(252, 252, 253, 0.86) 45%,
+    rgba(252, 252, 253, 0.42) 100%
+  );
+  pointer-events: none;
+}
+
+[data-md-color-scheme="slate"] .hero::after {
+  background: radial-gradient(
+    ellipse 70% 65% at 50% 48%,
+    rgba(28, 36, 41, 0.94) 0%,
+    rgba(28, 36, 41, 0.84) 45%,
+    rgba(28, 36, 41, 0.40) 100%
+  );
+}
+
 .hero h1 {
   margin: 1.1rem 0 0.1rem;
   font-size: 2.1rem;
   font-weight: 600;
+  color: var(--ac-charcoal);
+}
+
+[data-md-color-scheme="slate"] .hero h1 {
+  color: #f2f6f8;
 }
 
 .hero h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.86rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--ac-slate);
+  color: var(--ac-charcoal);
   border: none;
+}
+
+[data-md-color-scheme="slate"] .hero h3 {
+  color: #e2e9ed;
 }
 
 .hero em {
@@ -104,7 +160,11 @@
   max-width: 34rem;
   font-style: normal;
   font-size: 0.95rem;
-  color: var(--ac-slate);
+  color: #3c4a54;
+}
+
+[data-md-color-scheme="slate"] .hero em {
+  color: #dbe3e8;
 }
 
 /* Thin hairline ring on the profile photo */
@@ -145,6 +205,34 @@
   background-color: var(--ac-slate);
   border-color: var(--ac-slate);
   color: #fff;
+}
+
+/* Secondary button needs its own plate to stay legible over the artwork */
+.hero .md-typeset .md-button:not(.md-button--primary),
+.md-typeset .hero .md-button:not(.md-button--primary) {
+  background-color: rgba(252, 252, 253, 0.92);
+  border-color: var(--ac-slate);
+  color: var(--ac-charcoal);
+}
+
+.hero .md-typeset .md-button:not(.md-button--primary):hover,
+.md-typeset .hero .md-button:not(.md-button--primary):hover {
+  background-color: var(--ac-charcoal);
+  border-color: var(--ac-charcoal);
+  color: #fff;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .hero .md-button:not(.md-button--primary),
+[data-md-color-scheme="slate"] .hero .md-typeset .md-button:not(.md-button--primary) {
+  background-color: rgba(28, 36, 41, 0.82);
+  border-color: #8fa0ab;
+  color: #eef3f6;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary {
+  background-color: #e8edf0;
+  border-color: #e8edf0;
+  color: #1c2429;
 }
 
 /* About Me: photo beside text --------------------------------------------- */
