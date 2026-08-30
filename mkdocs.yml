@@ -7,8 +7,8 @@ copyright: Copyright &copy; 2026 Arka Bisui
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/images/logohorizontal.svg
-  # logo: assets/images/logovertical.svg
+  # logo: assets/images/logohorizontal.svg
+  logo: assets/images/logovertical.svg
   # favicon: assets/images/faviconvertical.png
   favicon: assets/images/faviconhorizontal.png
   features:
