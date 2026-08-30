@@ -6,8 +6,8 @@ copyright: Copyright &copy; 2026 Arka Bisui
 
 theme:
   name: material
-  logo: assets/images/profile.png
-  favicon: assets/images/profile.png
+  logo: assets/images/profile.jpg
+  favicon: assets/images/profile.jpg
   features:
     - navigation.instant
     - navigation.tracking
