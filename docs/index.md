@@ -6,7 +6,7 @@ hide:
 
 <div class="hero" markdown>
 
-![Arka Bisui](assets/images/profile.png){ .profile-pic }
+![Arka Bisui](assets/images/profile.jpg){ .profile-pic }
 
 # Arka Bisui
 
@@ -24,7 +24,7 @@ hide:
 <div class="about" markdown>
 
 <div markdown>
-![About Arka Bisui](assets/images/about.png){ .about-pic }
+![About Arka Bisui](assets/images/about.jpg){ .about-pic }
 </div>
 
 <div markdown>
