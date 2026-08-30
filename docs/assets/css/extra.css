@@ -1,78 +1,246 @@
-/* Hero section on the Home page */
-.hero {
-  text-align: center;
-  padding: 2rem 1rem 1.5rem 1rem;
-  background: linear-gradient(135deg,
-      rgba(232, 244, 248, 0.9) 0%,
-      rgba(240, 247, 255, 0.9) 50%,
-      rgba(232, 240, 254, 0.9) 100%);
-  border-radius: 12px;
-  margin-bottom: 2rem;
+/* ==========================================================================
+   Modern Minimalist
+   Charcoal #36454f · Slate Gray #708090 · Light Gray #d3d3d3 · White
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --ac-charcoal: #36454f;
+  --ac-slate: #708090;
+  --ac-light: #d3d3d3;
+  --ac-hairline: #e4e7e9;
+  --ac-paper: #fcfcfd;
+
+  --md-text-font: "IBM Plex Sans", system-ui, sans-serif;
+  --md-code-font: "IBM Plex Mono", ui-monospace, monospace;
 }
 
-[data-md-color-scheme="slate"] .hero {
-  background: linear-gradient(135deg,
-      rgba(30, 45, 55, 0.9) 0%,
-      rgba(28, 38, 52, 0.9) 50%,
-      rgba(32, 40, 60, 0.9) 100%);
+/* Repaint Material's teal slots as charcoal/slate ------------------------- */
+
+[data-md-color-primary="teal"] {
+  --md-primary-fg-color: #36454f;
+  --md-primary-fg-color--light: #4a5b66;
+  --md-primary-fg-color--dark: #2a363e;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+}
+
+[data-md-color-accent="deep-orange"] {
+  --md-accent-fg-color: #708090;
+  --md-accent-fg-color--transparent: #7080901a;
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: #ffffffb3;
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: var(--ac-paper);
+  --md-typeset-a-color: #4a5b66;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 210;
+  --ac-hairline: #ffffff1f;
+  --ac-paper: #1c2429;
+  --md-default-bg-color: #1c2429;
+  --md-typeset-a-color: #b8c4cc;
+}
+
+/* Typography --------------------------------------------------------------- */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--ac-charcoal);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: #e8edf0;
+}
+
+.md-typeset h2 {
+  margin-top: 3rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--ac-hairline);
+  font-size: 1.35rem;
+}
+
+.md-typeset p {
+  text-wrap: pretty;
+}
+
+/* Hero --------------------------------------------------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+  border-bottom: 1px solid var(--ac-hairline);
+  margin-bottom: 2.5rem;
 }
 
 .hero h1 {
-  margin: 0.6rem 0 0.2rem 0;
+  margin: 1.1rem 0 0.1rem;
+  font-size: 2.1rem;
+  font-weight: 600;
 }
 
 .hero h3 {
+  margin: 0;
   font-weight: 400;
-  margin: 0.2rem 0;
-  color: var(--md-default-fg-color--light);
+  font-size: 0.86rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ac-slate);
+  border: none;
 }
 
 .hero em {
   display: block;
-  margin: 0.8rem 0 1.2rem 0;
-  color: var(--md-default-fg-color--light);
+  margin: 1rem auto 1.6rem;
+  max-width: 34rem;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: var(--ac-slate);
 }
 
-/* Circular profile picture */
+/* Thin hairline ring on the profile photo */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 168px;
+  height: 168px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--md-primary-fg-color);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--ac-light);
+  padding: 5px;
+  background: var(--ac-paper);
+  box-shadow: none;
 }
 
-/* About Me image */
+[data-md-color-scheme="slate"] .profile-pic {
+  border-color: #ffffff2e;
+}
+
+/* Buttons ------------------------------------------------------------------ */
+
+.md-typeset .md-button {
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 0.5em 1.3em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--ac-charcoal);
+  border-color: var(--ac-charcoal);
+  color: #fff;
+}
+
+.md-typeset .md-button--primary:hover {
+  background-color: var(--ac-slate);
+  border-color: var(--ac-slate);
+  color: #fff;
+}
+
+/* About Me: photo beside text --------------------------------------------- */
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr);
+  gap: 2.25rem;
+  align-items: start;
+}
+
+@media screen and (max-width: 59.9em) {
+  .about {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+}
+
 .about-pic {
   width: 100%;
-  max-width: 420px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 3px;
+  border: 1px solid var(--ac-hairline);
 }
 
-/* Project cards */
-.md-typeset .grid.cards > ul > li img {
-  width: 100%;
-  border-radius: 8px 8px 0 0;
-  margin: -0.8rem -0.8rem 0.8rem -0.8rem;
+.about p:first-child {
+  margin-top: 0;
+}
+
+/* Cards -------------------------------------------------------------------- */
+
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--ac-hairline);
+  border-radius: 3px;
+  box-shadow: none;
+  transition: border-color 0.15s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--ac-slate);
+  box-shadow: none;
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.6em 0;
+  border-bottom: 1px solid var(--ac-hairline);
+}
+
+.md-typeset .grid.cards > ul > li .twemoji,
+.md-typeset .grid.cards > ul > li .twemoji svg {
+  fill: var(--ac-slate);
+  width: 1.05em;
+  height: 1.05em;
+}
+
+/* Project cover images sit flush at the top of their card */
+.md-typeset .grid.cards > ul > li > p:first-child > img {
   width: calc(100% + 1.6rem);
   max-width: none;
+  margin: -0.8rem -0.8rem 0.9rem;
+  border-radius: 3px 3px 0 0;
   object-fit: cover;
   aspect-ratio: 16 / 9;
 }
 
-.md-typeset .grid.cards > ul > li {
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+/* Tables ------------------------------------------------------------------- */
 
-.md-typeset .grid.cards > ul > li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
-}
-
-/* Tables sit better full-width on the experience page */
 .md-typeset table:not([class]) {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  border: 1px solid var(--ac-hairline);
+  border-radius: 3px;
+}
+
+.md-typeset table:not([class]) th {
+  background: transparent;
+  color: var(--ac-charcoal);
+  font-weight: 600;
+  border-bottom: 1px solid var(--ac-light);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  color: #e8edf0;
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--ac-hairline);
+}
+
+/* Footer ------------------------------------------------------------------- */
+
+.md-footer {
+  background-color: var(--ac-charcoal);
+}
+
+.md-footer-meta {
+  background-color: #2a363e;
 }
