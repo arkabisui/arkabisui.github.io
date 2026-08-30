@@ -1,0 +1,82 @@
+site_name: Arka Bisui
+site_description: Transportation Systems Engineering researcher at IIT Bombay — traffic signal control, simulation and geospatial analysis.
+site_author: Arka Bisui
+site_url: https://arkabisui.github.io/
+copyright: Copyright &copy; 2026 Arka Bisui
+
+theme:
+  name: material
+  logo: assets/images/profile.png
+  favicon: assets/images/profile.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Experience: experience.md
+  - Projects:
+      - Overview: projects/index.md
+      - Adaptive Signal Offsets: projects/offset-adaptation.md
+      - IITB Campus Traffic Study: projects/iitb-campus-traffic.md
+      - Soil–Pile Interaction, Bridge Pier: projects/soil-pile-interaction.md
+      - G+2 RCC Hostel Building: projects/hostel-building-design.md
+  - Contact: contact.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      include_source: true
+
+extra_css:
+  - assets/css/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/arkabisui
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/arkabisui
+      name: LinkedIn
+    - icon: fontawesome/solid/envelope
+      link: mailto:arkabisui6@gmail.com
+      name: Email
+
+exclude_docs: |
+  IMAGES-NEEDED.md
