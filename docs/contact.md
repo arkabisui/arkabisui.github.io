@@ -34,7 +34,7 @@ I am always glad to talk about transportation research, collaborations, or oppor
 
 ### Current
 
-Students' Residential Zone, IIT Area
+Hostel 12, IIT Area
 Powai, Mumbai, Maharashtra
 India 400076
 
