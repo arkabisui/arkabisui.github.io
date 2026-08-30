@@ -98,7 +98,7 @@ I am driven by research and innovation, and by applying analytical and experimen
 
     ---
 
-    [/in/arkabisui](https://www.linkedin.com/in/arkabisui)
+    [/in/arkabisui](https://www.linkedin.com/in/arka-bisui-343153234/)
 
 -   :fontawesome-brands-github: **GitHub**
 
