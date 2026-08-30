@@ -8,4 +8,4 @@ This website is built using the following tools
 * GitHub Pages
 * GitHub Actions
 
-> Tip: You can get the portfolio template from [Spatial Thoughts](https://github.com/spatialthoughts/portfolio-website-template)
+> Website developed by [Somdeep Kundu](https://somdeepkundu.github.io/)
