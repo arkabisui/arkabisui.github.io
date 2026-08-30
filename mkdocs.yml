@@ -6,6 +6,7 @@ copyright: Copyright &copy; 2026 Arka Bisui
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/images/profile.jpg
   favicon: assets/images/profile.jpg
   features:
