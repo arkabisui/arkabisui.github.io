@@ -20,7 +20,7 @@ I am always glad to talk about transportation research, collaborations, or oppor
 
     ---
 
-    [linkedin.com/in/arkabisui](https://www.linkedin.com/in/arkabisui)
+    [linkedin.com/in/arkabisui](https://www.linkedin.com/in/arka-bisui-343153234/)
 
 -   :fontawesome-brands-github: **GitHub**
 
